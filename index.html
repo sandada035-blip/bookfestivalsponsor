@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard កាតសិស្ស</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-content">
+            <div class="brand-area">
+                <img src="school_logo.png" alt="School Logo" class="school-logo">
+                <div class="app-info">
+                    <h1>កាតសិស្ស</h1>
+                    <p id="subtitle">Connecting to data...</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="btnRefresh" class="icon-btn">🔄</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="glass-card filter-section">
+            <div class="search-bar-container">
+                <input type="text" id="q" class="search-input" placeholder="ស្វែងរកឈ្មោះ, ID...">
+            </div>
+            <div class="filters-row">
+                <select id="classFilter" class="custom-select"><option value="">គ្រប់ថ្នាក់</option></select>
+                <select id="sexFilter" class="custom-select"><option value="">ភេទ</option></select>
+                <select id="sortBy" class="custom-select">
+                    <option value="default">លំនាំដើម</option>
+                    <option value="name_asc">ឈ្មោះ A-Z</option>
+                    <option value="amount_desc">ប្រាក់ (ច្រើន-តិច)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="summary-row">
+            <div class="summary-card">
+                <span class="sum-label">សិស្សសរុប</span>
+                <div class="sum-value-box">
+                    <span class="sum-num" id="sumCount">0</span>
+                    <span class="sum-unit">នាក់</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <span class="sum-label" id="sumELabel">សរុបទឹកប្រាក់</span>
+                <div class="sum-value-box">
+                    <span class="sum-num" id="sumENum">0</span>
+                    <span class="sum-unit">KHR</span>
+                </div>
+            </div>
+        </section>
+
+        <div id="stateBox" class="state-message">កំពុងទាញទិន្នន័យ...</div>
+
+        <div id="grid" class="cards-grid-layout"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
