@@ -159,4 +159,5 @@ document.getElementById("sortBy").addEventListener("change", render);
 document.getElementById("btnRefresh").addEventListener("click", loadData);
 
 // Load data on start
+
 window.onload = loadData;
